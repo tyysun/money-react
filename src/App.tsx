@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Switch, Route, Redirect, Link } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import styled from 'styled-components';
 import Nav from './components/Nav';
 
@@ -13,8 +13,6 @@ const Main = styled.div`
   flex-grow: 1;
   overflow: auto;
 `;
-
-
 
 function App() {
   return (
