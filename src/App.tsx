@@ -37,7 +37,7 @@ function App() {
             </Route>
           </Switch>
         </Main>
-        <Nav></Nav>
+        <Nav/>
       </Wrapper>
 
     </Router>
