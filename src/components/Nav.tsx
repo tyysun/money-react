@@ -41,7 +41,7 @@ function Nav() {
         </li>
         <li>
           <Icon name="chart"/>
-          <Link to="/statistics">记账页</Link>
+          <Link to="/statistics">统计页</Link>
         </li>
       </ul>
     </NavWrapper>
