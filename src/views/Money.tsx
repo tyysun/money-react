@@ -24,8 +24,7 @@ const TagsSection = styled.section`
     color: #666;
     margin-top: 8px;
   }
-`
-
+`;
 const NotesSection = styled.section`
   background: #f5f5f5;
   padding: 0 16px;
@@ -45,16 +44,35 @@ const NotesSection = styled.section`
       background: none;
     }
   }
-`
+`;
 const CategorySection = styled.section`
-
-`
+  > ul {
+    display: flex;
+    font-size: 24px;
+     background: #c4c4c4;
+    > li {
+      width: 50%;
+      text-align: center;
+      padding: 16px 0;
+      position: relative;
+      &.selected::after{
+        content: '';
+        height: 3px;
+        background: #333;
+        display: block;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+      }
+    }
+    
+  }
+`;
 const NumberPadSection = styled.section`
 
-`
+`;
 
-
-const Money = () =>{
+const Money = () => {
   return (
     <Layout>
       <TagsSection>
@@ -74,7 +92,7 @@ const Money = () =>{
       </NotesSection>
       <CategorySection>
         <ul>
-          <li>支出</li>
+          <li className="selected">支出</li>
           <li>收入</li>
         </ul>
       </CategorySection>
@@ -98,6 +116,6 @@ const Money = () =>{
         </div>
       </NumberPadSection>
     </Layout>
-  )
-}
-export default Money
+  );
+};
+export default Money;
