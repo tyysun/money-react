@@ -36,12 +36,18 @@ const Wrapper = styled.section`
 //   )
 // }
 // 非受控模式
-const NoteSection: React.FC = () => {
-  const [note, setNote] = useState('');
+
+type Props = {
+  value:string;
+  onChange:(value:string)=>void
+}
+
+const NoteSection: React.FC<Props> = (props) => {
+  const note = props.value
   const refInput = useRef<HTMLInputElement>(null);
   const onBlue = () => {
     if (refInput.current !== null) {
-      setNote(refInput.current.value);
+      props.onChange(refInput.current.value);
     }
   };
   return (
@@ -52,7 +58,7 @@ const NoteSection: React.FC = () => {
                ref={refInput}
                defaultValue={note}
                onBlur={onBlue}
-               onChange={(e) => setNote(e.target.value)}
+               onChange={(e) => props.onChange(e.target.value)}
         />
       </label>
     </Wrapper>
