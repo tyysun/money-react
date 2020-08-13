@@ -30,10 +30,6 @@ const Money = () => {
 
   return (
     <MyLayout>
-      {selected.tags.join(',')}
-      <hr/>
-      {selected.amount}
-
       <TagsSection value={selected.tags}
                    onChange={(tags) => onChange({
                      tags
